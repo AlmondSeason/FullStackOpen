@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    note right of browser: The HTTP 201 Created success status response code indicates that the request has succeeded and has led to the creation of a resource.
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    server-->>browser: {"message":"note created"} 
+    deactivate server
